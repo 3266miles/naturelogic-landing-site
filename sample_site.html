@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Work+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#042018",
+              "on-secondary-container": "#4c685d",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#0f2a2a",
+              "tertiary-fixed": "#cce8e8",
+              "tertiary-container": "#264040",
+              "error-container": "#ffdad6",
+              "outline": "#717973",
+              "primary": "#012d1d",
+              "primary-fixed": "#c1ecd4",
+              "secondary-fixed-dim": "#afcdc0",
+              "tertiary-fixed-dim": "#b0cccc",
+              "surface-variant": "#e1e3e1",
+              "surface-tint": "#3f6653",
+              "secondary-fixed": "#cae9db",
+              "on-error-container": "#93000a",
+              "background": "#f8faf8",
+              "on-primary-fixed-variant": "#274e3d",
+              "secondary-container": "#c8e7d9",
+              "surface-container-low": "#f2f4f2",
+              "on-surface-variant": "#414844",
+              "on-error": "#ffffff",
+              "surface-dim": "#d8dad9",
+              "on-secondary-fixed-variant": "#314c42",
+              "inverse-primary": "#a5d0b9",
+              "surface-container": "#edeeec",
+              "inverse-surface": "#2e3130",
+              "surface-bright": "#f8faf8",
+              "on-tertiary": "#ffffff",
+              "inverse-on-surface": "#eff1ef",
+              "secondary": "#486459",
+              "on-primary-container": "#86af99",
+              "outline-variant": "#c1c8c2",
+              "on-tertiary-container": "#90abab",
+              "error": "#ba1a1a",
+              "primary-container": "#1b4332",
+              "on-primary-fixed": "#002114",
+              "on-background": "#191c1b",
+              "surface": "#f8faf8",
+              "surface-container-high": "#e7e9e7",
+              "on-surface": "#191c1b",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#a5d0b9",
+              "surface-container-highest": "#e1e3e1",
+              "on-tertiary-fixed-variant": "#314b4b",
+              "on-tertiary-fixed": "#041f20"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+      }
+      .editorial-shadow {
+        box-shadow: 0 10px 40px -10px rgba(25, 28, 27, 0.06);
+      }
+      .silk-gradient {
+        background: linear-gradient(145deg, #012d1d 0%, #1b4332 100%);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-xl font-bold tracking-tighter text-emerald-900 dark:text-emerald-50 font-headline">
+                The Ecological Observer
+            </div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="font-manrope tracking-tight font-semibold text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-800 pb-1" href="#">Services</a>
+<a class="font-manrope tracking-tight font-semibold text-emerald-900/70 dark:text-emerald-200/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">About</a>
+<a class="font-manrope tracking-tight font-semibold text-emerald-900/70 dark:text-emerald-200/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Research</a>
+<a class="font-manrope tracking-tight font-semibold text-emerald-900/70 dark:text-emerald-200/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Case Studies</a>
+</div>
+<button class="silk-gradient text-white px-6 py-2.5 rounded-xl font-manrope font-semibold hover:opacity-80 transition-opacity duration-300">
+                Contact Us
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-surface">
+<div class="absolute inset-0 z-0">
+<img alt="Aerial view of structured agricultural landscape in the UK, patchwork fields of varying crops, sustainable farming aesthetic." class="w-full h-full object-cover" data-alt="Aerial view of structured agricultural landscape in the UK, patchwork fields of varying crops, clean lines, sustainable farming aesthetic, professional and high-resolution, landscape orientation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9OJAW36Tmu7UE74rnrHcxgt02_LAWtYwLxaa3JfCGNjQ0s0rJc_k4A08VS3yR7CCzzSirysKwzMxJ-ipuZysS-z60xyPJY0NpowSe_bR8cIMheg0ZDOKNdqnHnb6Js_dgZqXNiuPiOTZ5j5Bq9JPLvWgRWOFhzIwP4AzqLyID4M1cpbyEGbPTZhLmpsPrK0hmNvNkqSzR0feqmm6IvWCLGqtP8AK6mEsgHOhZ6BCjf_v48MbWQJAdV0fmZ2pcR3RmKzeU_Usm2AJ2"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/50 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-2xl">
+<span class="inline-block bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-[0.75rem] font-label tracking-[0.05em] uppercase mb-6">
+                        UK Registered Consultancy
+                    </span>
+<h1 class="text-white font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8">
+                        Expert Ecology for <span class="text-primary-fixed">Sustainable</span> Development
+                    </h1>
+<p class="text-emerald-50/90 text-xl font-body mb-10 leading-relaxed max-w-lg">
+                        Navigating complex environmental regulations with scientific precision. We protect biodiversity while enabling your project's success.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="silk-gradient text-white px-8 py-4 rounded-xl font-manrope font-bold text-lg hover:opacity-90 transition-all flex items-center gap-2" href="#services">
+                            Our Services
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<a class="bg-surface/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-manrope font-bold text-lg hover:bg-white/20 transition-all" href="#">
+                            View Case Studies
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section: Bento Grid -->
+<section class="py-32 bg-surface-container-low" id="services">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<h2 class="text-primary font-headline text-4xl font-extrabold tracking-tight mb-4">Core Ecological Solutions</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Our multi-disciplinary team provides comprehensive surveying and strategic advice across the UK's most sensitive habitats.</p>
+</div>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Habitat Surveys -->
+<div class="md:col-span-7 bg-surface-container-lowest p-10 rounded-xl editorial-shadow group hover:bg-primary transition-colors duration-500">
+<div class="mb-12 text-primary group-hover:text-primary-fixed">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">park</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4 group-hover:text-white">Habitat Surveys</h3>
+<p class="text-on-surface-variant group-hover:text-emerald-100/80 mb-8 leading-relaxed">
+                            From Preliminary Ecological Appraisals (PEA) to UKHab classifications, we provide the baseline data required for informed planning decisions.
+                        </p>
+<ul class="space-y-3 mb-10 group-hover:text-white">
+<li class="flex items-center gap-3 font-label text-sm tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span> PRELIMINARY APPRAISALS
+                            </li>
+<li class="flex items-center gap-3 font-label text-sm tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span> BOTANICAL CLASSIFICATION
+                            </li>
+<li class="flex items-center gap-3 font-label text-sm tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span> ANCIENT WOODLAND ASSESSMENT
+                            </li>
+</ul>
+<a class="inline-flex items-center gap-2 text-primary group-hover:text-primary-fixed font-bold border-b-2 border-primary/20 group-hover:border-primary-fixed/20 pb-1" href="#">
+                            Learn more
+                        </a>
+</div>
+<!-- Biodiversity Net Gain -->
+<div class="md:col-span-5 bg-tertiary p-10 rounded-xl editorial-shadow overflow-hidden relative">
+<div class="relative z-10">
+<div class="mb-12 text-primary-fixed">
+<span class="material-symbols-outlined text-5xl">biotech</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-white mb-4">Biodiversity Net Gain</h3>
+<p class="text-tertiary-fixed-dim mb-8 leading-relaxed">
+                                Mandatory 10% uplift strategy and Metric 4.0 calculations for developers.
+                            </p>
+<a class="inline-flex items-center gap-2 text-primary-fixed font-bold border-b-2 border-primary-fixed/20 pb-1" href="#">
+                                Explore BNG
+                            </a>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-[12rem]">eco</span>
+</div>
+</div>
+<!-- Protected Species -->
+<div class="md:col-span-5 bg-secondary-container p-10 rounded-xl editorial-shadow group">
+<div class="mb-12 text-primary">
+<span class="material-symbols-outlined text-5xl">pest_control_rodent</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4">Protected Species</h3>
+<p class="text-on-secondary-container mb-8 leading-relaxed">
+                            Expert licensing and mitigation for bats, Great Crested Newts, dormice, and badgers.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white/50 rounded-full text-[0.65rem] font-bold tracking-tighter uppercase text-primary">BATS</span>
+<span class="px-3 py-1 bg-white/50 rounded-full text-[0.65rem] font-bold tracking-tighter uppercase text-primary">GCN</span>
+<span class="px-3 py-1 bg-white/50 rounded-full text-[0.65rem] font-bold tracking-tighter uppercase text-primary">REPTILES</span>
+</div>
+</div>
+<!-- Environmental Strategy -->
+<div class="md:col-span-7 relative h-64 md:h-auto rounded-xl overflow-hidden group">
+<img alt="Green Field UK" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Rolling green hills in the British countryside" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWmZcA7lDhZwGixCq9zFS-cBn3r1lbHjyJyDshvFtq38N0TSzHIpIqlV8BgXGrHJS5pkG-xcSKENLZ6RxuqcaFtBmpZlhhe0WQqK0zwazuONlv2dRUUeU_ZWksIaKRHtXw41t45ihbSF2tus-PIIkU3bIBUO_5ME5FCcOOILC_0mIgXWKbUdLxKC_9zwZO61irLRbFzWS_kK-V2jfa-aiax1iqa4mdKGwHJQBCPiNnn60OIgveqkwA_5wmBMYPXegYhYkQ2n-rnfNY"/>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] flex flex-col justify-end p-10">
+<h3 class="text-2xl font-headline font-bold text-white mb-2">Strategic Consultancy</h3>
+<p class="text-white/80 max-w-sm">Long-term environmental stewardship and land management plans.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us: Asymmetric Layout -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Ecologist in Field" class="w-full h-full object-cover" data-alt="Professional ecologist conducting a field survey in UK countryside" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4XYd61tzFAEqhbZ3YS5Da4GNY-u2Ti5LlejDJmvJXysX2gsUw9KJbRG-qfujGaOe3H6N_PuFv5fmBm6a5I0aMnw7pTteF65bXeswYNhuCqUZycZm2h37Owf0ItfkbBoebL2x5cRj3fMtxxtVBLOxXl_djX2j2BtAD8_k0jlbffA_YL1IHZ3IfOA0DlrMGBHF6jsOSGPdj5NX421lpg1Pfn8ib-bObgcPSa8xvS-9DxG-G1Pd6DyLROq-11HcqztU_zDGZcUUYE38A"/>
+</div>
+<div class="absolute -bottom-12 -right-12 bg-primary-container p-12 rounded-xl hidden md:block max-w-xs editorial-shadow">
+<p class="text-primary-fixed text-4xl font-headline font-extrabold mb-2">15+</p>
+<p class="text-white font-label tracking-wider text-xs uppercase">Years of Field Expertise in the UK</p>
+</div>
+</div>
+<div>
+<span class="text-primary font-label tracking-[0.2em] uppercase text-xs mb-6 block">Our Commitment</span>
+<h2 class="text-primary font-headline text-4xl md:text-5xl font-extrabold tracking-tight mb-8 leading-tight">Expert knowledge, rooted in the <span class="italic font-normal">natural</span> environment.</h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+<p>At The Ecological Observer, we believe that development and conservation are not mutually exclusive. Our mission is to provide the high-fidelity data and strategic insight necessary to bridge that gap.</p>
+<p>Our team of CIEEM-registered ecologists specializes in navigating the UK's intricate legislative landscape, ensuring that your projects meet the highest standards of environmental stewardship.</p>
+</div>
+<div class="mt-12 pt-12 border-t border-outline-variant/30 grid grid-cols-2 gap-8">
+<div>
+<h4 class="font-headline font-bold text-primary text-xl mb-2">CIEEM Certified</h4>
+<p class="text-sm text-on-surface-variant">Adhering to the highest codes of professional conduct.</p>
+</div>
+<div>
+<h4 class="font-headline font-bold text-primary text-xl mb-2">Policy Led</h4>
+<p class="text-sm text-on-surface-variant">Expertise in NPPF and local environmental policy.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Research: Editorial Cards -->
+<section class="py-32 bg-surface-container">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-20 text-center max-w-2xl mx-auto">
+<h2 class="text-primary font-headline text-4xl font-extrabold tracking-tight mb-4">Latest Insights</h2>
+<p class="text-on-surface-variant">Peer-reviewed research and practical application from the front lines of UK ecology.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<article class="group">
+<div class="aspect-video rounded-lg overflow-hidden mb-6">
+<img alt="Bat Surveying" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Night-time bat surveying equipment in a forest setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq__VM_DAtTjo_NXohSdzbzG8gTmnlkpdur2DSl692OSKDfQ4Walpppug6Mlvlv0BjNlCKUoP43SpUTwco0w2efiab8rr4JHAkBCPBX6_RZKeYUHx21oGIUhHdFbHUDeYYHe7FB-TKXtFvyA3PEjuHf4Lstqf_qKQO2KiiMxQV-V-Whqn_Au89EZA-v2JtxpT2HeYoG0m5Rw9SHcDfu1bFh9KBQcHCbX2ryZEv0R8RaVengYjn8gPXOsdfXyKU-gJIDJzuMz6Uupc5"/>
+</div>
+<span class="text-[0.65rem] font-bold text-primary/60 tracking-widest uppercase mb-3 block">WHITE PAPER — 2024</span>
+<h3 class="text-xl font-headline font-bold text-primary mb-4 group-hover:text-secondary transition-colors leading-tight">
+                            The Impact of Light Pollution on Bat Foraging Corridors in Rural Kent
+                        </h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Exploring how developmental lighting affects the connectivity of ancient woodland habitats for local bat populations.</p>
+<a class="inline-flex items-center gap-2 font-bold text-sm text-primary group-hover:gap-4 transition-all" href="#">
+                            Read Full Study <span class="material-symbols-outlined text-sm">trending_flat</span>
+</a>
+</article>
+<article class="group">
+<div class="aspect-video rounded-lg overflow-hidden mb-6">
+<img alt="Data Analysis" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Digital tablet showing ecological mapping data in the field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFRi2VfXihAsTMmCJb4x9twediCXs3kyqpQbzC63WB_55nXlK0Pz1vlrudDyXIKJkSbv20fvvyFkuxTyRHbOqS1FiHoqUPz9f-MeKsDKLZwRZUoLarlaKzsgYE9CzLyDv1YuRO9-XX5YlpD-44b1-B4yi9GqsHafJ6V1WN4zZPqUYP6dK2Cr89jCRxvofGa_iCxflLvx3iIXGgWe7elhBcSLxSUrwHE0vJXdjEijzYj_ppfqkEmix_ejSGdB5nCP8RDSJRj0fcWVh7"/>
+</div>
+<span class="text-[0.65rem] font-bold text-primary/60 tracking-widest uppercase mb-3 block">CASE STUDY — OXFORDSHIRE</span>
+<h3 class="text-xl font-headline font-bold text-primary mb-4 group-hover:text-secondary transition-colors leading-tight">
+                            Implementing 15% Biodiversity Net Gain on a 500-Unit Residential Scheme
+                        </h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">A technical breakdown of how we utilized on-site mitigation and local credits to exceed statutory requirements.</p>
+<a class="inline-flex items-center gap-2 font-bold text-sm text-primary group-hover:gap-4 transition-all" href="#">
+                            View Methodology <span class="material-symbols-outlined text-sm">trending_flat</span>
+</a>
+</article>
+<article class="group">
+<div class="aspect-video rounded-lg overflow-hidden mb-6">
+<img alt="Wildlife Conservation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close-up of a Great Crested Newt in a glass container for study" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAW7eoHO63nO-NwX9aYGtQSTGWnbUB_unvQqKuz3gKnKLGcevvCdYahjZUfCedXSIHOoyWu2I6c_JZ0rq44JVREmRzlVpHg7KIRj8HHnf5B6kaHDFm5LIr_P7UXiQhjijvxFjnGRMlejQZjvm8zQmAPTRh7bV9rKA24SbPoGxB0-5wAZsJAgF1ZRFhlvnUzkOSWFgk6McwLhaOSwjKdp1BQMSaTUnEbX1IA8mpYT14-dBNHK-gFr2L8ZQkMc1xXjukcJu94LAGTdRA"/>
+</div>
+<span class="text-[0.65rem] font-bold text-primary/60 tracking-widest uppercase mb-3 block">POLICY REVIEW — 2023</span>
+<h3 class="text-xl font-headline font-bold text-primary mb-4 group-hover:text-secondary transition-colors leading-tight">
+                            Protected Species Licensing: Navigating the 2024 Regulatory Shift
+                        </h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">How upcoming legislative changes will affect project timelines and licensing requirements for protected species.</p>
+<a class="inline-flex items-center gap-2 font-bold text-sm text-primary group-hover:gap-4 transition-all" href="#">
+                            Get the Guide <span class="material-symbols-outlined text-sm">trending_flat</span>
+</a>
+</article>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 bg-primary">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div>
+<h2 class="text-white font-headline text-4xl font-extrabold tracking-tight mb-6">Ready to discuss your project?</h2>
+<p class="text-emerald-100/70 text-lg mb-12">Speak with a lead ecologist today about your site's requirements. We offer free initial consultations for all new development inquiries.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h4 class="text-white font-bold mb-1">Email Our Office</h4>
+<p class="text-emerald-100/60">enquiries@ecologicalobserver.co.uk</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h4 class="text-white font-bold mb-1">Direct Technical Line</h4>
+<p class="text-emerald-100/60">+44 (0) 20 8123 4567</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<h4 class="text-white font-bold mb-1">Headquarters</h4>
+<p class="text-emerald-100/60">Bristol &amp; South West Regional Office<br/>Temple Meads, Bristol, BS1 6QF</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 rounded-xl editorial-shadow">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[0.65rem] font-bold text-primary/60 tracking-widest uppercase">Full Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none" placeholder="Jane Smith" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[0.65rem] font-bold text-primary/60 tracking-widest uppercase">Email Address</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none" placeholder="jane@company.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[0.65rem] font-bold text-primary/60 tracking-widest uppercase">Project Type</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none appearance-none">
+<option>Residential Development</option>
+<option>Infrastructure Project</option>
+<option>Renewable Energy</option>
+<option>Biodiversity Net Gain Strategy</option>
+<option>Protected Species Survey</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-[0.65rem] font-bold text-primary/60 tracking-widest uppercase">Message / Site Details</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none" placeholder="How can our experts assist you?" rows="4"></textarea>
+</div>
+<button class="w-full silk-gradient text-white py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-all" type="submit">
+                            Submit Inquiry
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-emerald-900 dark:bg-emerald-950 w-full pt-16 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
+<div class="md:col-span-1">
+<div class="text-lg font-bold text-white font-headline mb-6">The Ecological Observer</div>
+<p class="text-emerald-200/60 text-sm leading-relaxed mb-8">Professional ecological consultancy providing scientific authority and environmental stewardship across the UK.</p>
+<div class="flex gap-4">
+<a class="text-emerald-200/60 hover:text-white" href="#"><span class="material-symbols-outlined">language</span></a>
+<a class="text-emerald-200/60 hover:text-white" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+<div class="space-y-4">
+<h5 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Services</h5>
+<ul class="space-y-3">
+<li><a class="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Habitat Surveys</a></li>
+<li><a class="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Biodiversity Net Gain</a></li>
+<li><a class="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Protected Species</a></li>
+<li><a class="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Mitigation Strategy</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Company</h5>
+<ul class="space-y-3">
+<li><a class="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">About Us</a></li>
+<li><a class="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Research Portfolio</a></li>
+<li><a class="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Careers</a></li>
+<li><a class="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Legal</h5>
+<ul class="space-y-3">
+<li><a class="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Privacy Policy</a></li>
+<li><a class="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Terms of Service</a></li>
+<li><a class="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Ethical Conduct</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-emerald-800/50 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-emerald-200/60 text-xs font-work-sans tracking-wide">© 2024 The Ecological Observer. UK Registered Consultancy.</p>
+<div class="flex gap-8 text-xs font-work-sans text-emerald-200/40">
+<span>VAT NO: 123 4567 89</span>
+<span>COMPANY NO: 987654321</span>
+</div>
+</div>
+</footer>
+</body></html>

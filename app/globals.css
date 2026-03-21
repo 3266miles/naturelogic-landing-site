@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Static Material Design 3 color tokens */
+@theme {
+  --color-on-secondary-fixed: #042018;
+  --color-on-secondary-container: #4c685d;
+  --color-on-secondary: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-tertiary: #0f2a2a;
+  --color-tertiary-fixed: #cce8e8;
+  --color-tertiary-container: #264040;
+  --color-error-container: #ffdad6;
+  --color-outline: #717973;
+  --color-primary: #012d1d;
+  --color-primary-fixed: #c1ecd4;
+  --color-secondary-fixed-dim: #afcdc0;
+  --color-tertiary-fixed-dim: #b0cccc;
+  --color-surface-variant: #e1e3e1;
+  --color-surface-tint: #3f6653;
+  --color-secondary-fixed: #cae9db;
+  --color-on-error-container: #93000a;
+  --color-background: #f8faf8;
+  --color-on-primary-fixed-variant: #274e3d;
+  --color-secondary-container: #c8e7d9;
+  --color-surface-container-low: #f2f4f2;
+  --color-on-surface-variant: #414844;
+  --color-on-error: #ffffff;
+  --color-surface-dim: #d8dad9;
+  --color-on-secondary-fixed-variant: #314c42;
+  --color-inverse-primary: #a5d0b9;
+  --color-surface-container: #edeeec;
+  --color-inverse-surface: #2e3130;
+  --color-surface-bright: #f8faf8;
+  --color-on-tertiary: #ffffff;
+  --color-inverse-on-surface: #eff1ef;
+  --color-secondary: #486459;
+  --color-on-primary-container: #86af99;
+  --color-outline-variant: #c1c8c2;
+  --color-on-tertiary-container: #90abab;
+  --color-error: #ba1a1a;
+  --color-primary-container: #1b4332;
+  --color-on-primary-fixed: #002114;
+  --color-on-background: #191c1b;
+  --color-surface: #f8faf8;
+  --color-surface-container-high: #e7e9e7;
+  --color-on-surface: #191c1b;
+  --color-on-primary: #ffffff;
+  --color-primary-fixed-dim: #a5d0b9;
+  --color-surface-container-highest: #e1e3e1;
+  --color-on-tertiary-fixed-variant: #314b4b;
+  --color-on-tertiary-fixed: #041f20;
+
+  /* Border radius system — tighter scale matching design tokens */
+  --radius: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
 }
 
+/* Dynamic font theme values — resolved at runtime via next/font CSS variables */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-headline: var(--font-manrope);
+  --font-body: var(--font-work-sans);
+  --font-label: var(--font-work-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Material Symbols variable font defaults */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom design utilities */
+.editorial-shadow {
+  box-shadow: 0 10px 40px -10px rgba(25, 28, 27, 0.06);
+}
+
+.silk-gradient {
+  background: linear-gradient(145deg, #012d1d 0%, #1b4332 100%);
 }
