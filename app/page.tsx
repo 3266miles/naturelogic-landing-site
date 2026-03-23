@@ -1,41 +1,47 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <>
       {/* Top Navigation Bar */}
-      <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+      <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl shadow-sm">
         <div className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-          <div className="text-xl font-bold tracking-tighter text-emerald-900 dark:text-emerald-50 font-headline">
-            The Ecological Observer
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo2.png"
+              alt="NatureLogic logo"
+              width={140}
+              height={48}
+              className="h-20 w-auto"
+              priority
+            />
           </div>
           <div className="hidden md:flex items-center space-x-10">
             <a
-              className="font-headline tracking-tight font-semibold text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-800 pb-1"
-              href="#"
+              className="font-headline tracking-tight font-semibold text-primary border-b-2 border-primary pb-1"
+              href="#services"
             >
               Services
             </a>
             <a
-              className="font-headline tracking-tight font-semibold text-emerald-900/70 dark:text-emerald-200/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors"
-              href="#"
+              className="font-headline tracking-tight font-semibold text-on-surface/60 hover:text-primary transition-colors"
+              href="#about"
             >
               About
             </a>
             <a
-              className="font-headline tracking-tight font-semibold text-emerald-900/70 dark:text-emerald-200/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors"
-              href="#"
+              className="font-headline tracking-tight font-semibold text-on-surface/60 hover:text-primary transition-colors"
+              href="#contact"
             >
-              Research
-            </a>
-            <a
-              className="font-headline tracking-tight font-semibold text-emerald-900/70 dark:text-emerald-200/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors"
-              href="#"
-            >
-              Case Studies
+              Contact
             </a>
           </div>
-          <button className="silk-gradient text-white px-6 py-2.5 rounded-xl font-headline font-semibold hover:opacity-80 transition-opacity duration-300">
-            Contact Us
-          </button>
+          <a
+            href="#contact"
+            className="silk-gradient text-white px-6 py-2.5 rounded-xl font-headline font-semibold hover:opacity-80 transition-opacity duration-300"
+          >
+            Get in Touch
+          </a>
         </div>
       </nav>
 
@@ -49,22 +55,20 @@ export default function Home() {
               className="w-full h-full object-cover"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9OJAW36Tmu7UE74rnrHcxgt02_LAWtYwLxaa3JfCGNjQ0s0rJc_k4A08VS3yR7CCzzSirysKwzMxJ-ipuZysS-z60xyPJY0NpowSe_bR8cIMheg0ZDOKNdqnHnb6Js_dgZqXNiuPiOTZ5j5Bq9JPLvWgRWOFhzIwP4AzqLyID4M1cpbyEGbPTZhLmpsPrK0hmNvNkqSzR0feqmm6IvWCLGqtP8AK6mEsgHOhZ6BCjf_v48MbWQJAdV0fmZ2pcR3RmKzeU_Usm2AJ2"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/50 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
             <div className="max-w-2xl">
-              <span className="inline-block bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-[0.75rem] font-label tracking-[0.05em] uppercase mb-6">
+              <span className="inline-block bg-white/15 text-white px-4 py-1 rounded-full text-[0.75rem] font-label tracking-[0.08em] uppercase mb-6 backdrop-blur-sm border border-white/20">
                 UK Registered Consultancy
               </span>
-              <h1 className="text-white font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8">
-                Expert Ecology for{" "}
-                <span className="text-primary-fixed">Sustainable</span>{" "}
-                Development
+              <h1 className="text-white font-headline text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] mb-8">
+                Providing Market-leading{" "}
+                <span className="text-primary-fixed">Ecological Consultancy</span>{" "}
+                and Biodiversity Net Gain Advice
               </h1>
-              <p className="text-emerald-50/90 text-xl font-body mb-10 leading-relaxed max-w-lg">
-                Navigating complex environmental regulations with scientific
-                precision. We protect biodiversity while enabling your
-                project&apos;s success.
+              <p className="text-white/80 text-xl font-body font-light mb-10 leading-relaxed max-w-lg">
+                Helping developers and infrastructure companies understand and navigate complex ecological requirements within the UK planning system.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
@@ -77,103 +81,63 @@ export default function Home() {
                   </span>
                 </a>
                 <a
-                  className="bg-surface/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-headline font-bold text-lg hover:bg-white/20 transition-all"
-                  href="#"
+                  className="bg-white/10 backdrop-blur-md text-white border border-white/25 px-8 py-4 rounded-xl font-headline font-bold text-lg hover:bg-white/20 transition-all"
+                  href="#contact"
                 >
-                  View Case Studies
+                  Get in Touch
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Services Section: Bento Grid */}
+        {/* Services Section */}
         <section className="py-32 bg-surface-container-low" id="services">
           <div className="max-w-7xl mx-auto px-8">
             <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
               <div className="max-w-xl">
+                <span className="text-secondary font-label tracking-[0.2em] uppercase text-xs mb-4 block font-semibold">
+                  What We Do
+                </span>
                 <h2 className="text-primary font-headline text-4xl font-extrabold tracking-tight mb-4">
-                  Core Ecological Solutions
+                  Our Services
                 </h2>
                 <p className="text-on-surface-variant text-lg leading-relaxed">
-                  Our multi-disciplinary team provides comprehensive surveying
-                  and strategic advice across the UK&apos;s most sensitive
-                  habitats.
+                  Deep ecological expertise delivered through modern, technology-enabled processes — helping your project move faster and with greater certainty.
                 </p>
-              </div>
-              <div className="flex gap-2">
-                <button className="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
-                  <span className="material-symbols-outlined">chevron_left</span>
-                </button>
-                <button className="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
-                  <span className="material-symbols-outlined">
-                    chevron_right
-                  </span>
-                </button>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-              {/* Habitat Surveys */}
+
+              {/* Early-stage ecological due diligence - large */}
               <div className="md:col-span-7 bg-surface-container-lowest p-10 rounded-xl editorial-shadow group hover:bg-primary transition-colors duration-500">
-                <div className="mb-12 text-primary group-hover:text-primary-fixed">
-                  <span
-                    className="material-symbols-outlined text-5xl"
-                    style={{ fontVariationSettings: "'FILL' 1" }}
-                  >
-                    park
+                <div className="mb-10 text-secondary group-hover:text-primary-fixed">
+                  <span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                    search
                   </span>
                 </div>
                 <h3 className="text-2xl font-headline font-bold text-primary mb-4 group-hover:text-white">
-                  Habitat Surveys
+                  Early-stage Ecological Due Diligence
                 </h3>
-                <p className="text-on-surface-variant group-hover:text-emerald-100/80 mb-8 leading-relaxed">
-                  From Preliminary Ecological Appraisals (PEA) to UKHab
-                  classifications, we provide the baseline data required for
-                  informed planning decisions.
+                <p className="text-on-surface-variant group-hover:text-white/75 leading-relaxed">
+                  Understanding ecological risk and opportunity early in the planning process, so you can make better-informed decisions about site selection, project design, and programme management.
                 </p>
-                <ul className="space-y-3 mb-10 group-hover:text-white">
-                  <li className="flex items-center gap-3 font-label text-sm tracking-wide">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
-                    PRELIMINARY APPRAISALS
-                  </li>
-                  <li className="flex items-center gap-3 font-label text-sm tracking-wide">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
-                    BOTANICAL CLASSIFICATION
-                  </li>
-                  <li className="flex items-center gap-3 font-label text-sm tracking-wide">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
-                    ANCIENT WOODLAND ASSESSMENT
-                  </li>
-                </ul>
-                <a
-                  className="inline-flex items-center gap-2 text-primary group-hover:text-primary-fixed font-bold border-b-2 border-primary/20 group-hover:border-primary-fixed/20 pb-1"
-                  href="#"
-                >
-                  Learn more
-                </a>
               </div>
 
-              {/* Biodiversity Net Gain */}
-              <div className="md:col-span-5 bg-tertiary p-10 rounded-xl editorial-shadow overflow-hidden relative">
+              {/* Habitats Regulations Assessment */}
+              <div className="md:col-span-5 p-10 rounded-xl editorial-shadow overflow-hidden relative" style={{ background: 'linear-gradient(145deg, #2d4a6b 0%, #1a5c3a 100%)' }}>
                 <div className="relative z-10">
-                  <div className="mb-12 text-primary-fixed">
+                  <div className="mb-10 text-primary-fixed">
                     <span className="material-symbols-outlined text-5xl">
-                      biotech
+                      account_balance
                     </span>
                   </div>
                   <h3 className="text-2xl font-headline font-bold text-white mb-4">
-                    Biodiversity Net Gain
+                    Habitats Regulations Assessment
                   </h3>
-                  <p className="text-tertiary-fixed-dim mb-8 leading-relaxed">
-                    Mandatory 10% uplift strategy and Metric 4.0 calculations
-                    for developers.
+                  <p className="text-white/70 leading-relaxed">
+                    Expert HRA support to identify and address potential impacts on European protected sites, keeping your project on track.
                   </p>
-                  <a
-                    className="inline-flex items-center gap-2 text-primary-fixed font-bold border-b-2 border-primary-fixed/20 pb-1"
-                    href="#"
-                  >
-                    Explore BNG
-                  </a>
                 </div>
                 <div className="absolute -right-10 -bottom-10 opacity-10">
                   <span className="material-symbols-outlined text-[12rem]">
@@ -184,55 +148,85 @@ export default function Home() {
 
               {/* Protected Species */}
               <div className="md:col-span-5 bg-secondary-container p-10 rounded-xl editorial-shadow group">
-                <div className="mb-12 text-primary">
+                <div className="mb-10 text-primary">
                   <span className="material-symbols-outlined text-5xl">
                     pest_control_rodent
                   </span>
                 </div>
                 <h3 className="text-2xl font-headline font-bold text-primary mb-4">
-                  Protected Species
+                  Protected Species Surveys
                 </h3>
-                <p className="text-on-secondary-container mb-8 leading-relaxed">
-                  Expert licensing and mitigation for bats, Great Crested Newts,
-                  dormice, and badgers.
+                <p className="text-on-secondary-container leading-relaxed">
+                  Specialist surveys and licensing for bats, Great Crested Newts, reptiles, dormice, badgers, and other legally protected species.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-white/50 rounded-full text-[0.65rem] font-bold tracking-tighter uppercase text-primary">
-                    BATS
-                  </span>
-                  <span className="px-3 py-1 bg-white/50 rounded-full text-[0.65rem] font-bold tracking-tighter uppercase text-primary">
-                    GCN
-                  </span>
-                  <span className="px-3 py-1 bg-white/50 rounded-full text-[0.65rem] font-bold tracking-tighter uppercase text-primary">
-                    REPTILES
-                  </span>
-                </div>
               </div>
 
-              {/* Strategic Consultancy */}
-              <div className="md:col-span-7 relative h-64 md:h-auto rounded-xl overflow-hidden group">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  alt="Rolling green hills in the British countryside"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWmZcA7lDhZwGixCq9zFS-cBn3r1lbHjyJyDshvFtq38N0TSzHIpIqlV8BgXGrHJS5pkG-xcSKENLZ6RxuqcaFtBmpZlhhe0WQqK0zwazuONlv2dRUUeU_ZWksIaKRHtXw41t45ihbSF2tus-PIIkU3bIBUO_5ME5FCcOOILC_0mIgXWKbUdLxKC_9zwZO61irLRbFzWS_kK-V2jfa-aiax1iqa4mdKGwHJQBCPiNnn60OIgveqkwA_5wmBMYPXegYhYkQ2n-rnfNY"
-                />
-                <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px] flex flex-col justify-end p-10">
-                  <h3 className="text-2xl font-headline font-bold text-white mb-2">
-                    Strategic Consultancy
-                  </h3>
-                  <p className="text-white/80 max-w-sm">
-                    Long-term environmental stewardship and land management
-                    plans.
-                  </p>
+              {/* Strategic Ecological Advice */}
+              <div className="md:col-span-7 bg-surface-container-lowest p-10 rounded-xl editorial-shadow group hover:bg-primary transition-colors duration-500">
+                <div className="mb-10 text-secondary group-hover:text-primary-fixed">
+                  <span className="material-symbols-outlined text-5xl">
+                    strategy
+                  </span>
                 </div>
+                <h3 className="text-2xl font-headline font-bold text-primary mb-4 group-hover:text-white">
+                  Strategic Ecological Advice
+                </h3>
+                <p className="text-on-surface-variant group-hover:text-white/75 leading-relaxed">
+                  High-level ecological strategy combining deep expertise with technology-enabled delivery — helping clients navigate the UK planning system with confidence.
+                </p>
               </div>
+
+              {/* Preliminary Ecological Appraisal */}
+              <div className="md:col-span-4 bg-surface-container-lowest p-10 rounded-xl editorial-shadow group hover:bg-primary transition-colors duration-500">
+                <div className="mb-8 text-secondary group-hover:text-primary-fixed">
+                  <span className="material-symbols-outlined text-5xl">
+                    park
+                  </span>
+                </div>
+                <h3 className="text-xl font-headline font-bold text-primary mb-4 group-hover:text-white">
+                  Preliminary Ecological Appraisal
+                </h3>
+                <p className="text-on-surface-variant group-hover:text-white/75 leading-relaxed text-sm">
+                  Baseline habitat and species assessments to inform planning applications and identify ecological constraints at an early stage.
+                </p>
+              </div>
+
+              {/* Ecological Impact Assessment */}
+              <div className="md:col-span-4 bg-surface-container-lowest p-10 rounded-xl editorial-shadow group hover:bg-primary transition-colors duration-500">
+                <div className="mb-8 text-secondary group-hover:text-primary-fixed">
+                  <span className="material-symbols-outlined text-5xl">
+                    analytics
+                  </span>
+                </div>
+                <h3 className="text-xl font-headline font-bold text-primary mb-4 group-hover:text-white">
+                  Ecological Impact Assessment
+                </h3>
+                <p className="text-on-surface-variant group-hover:text-white/75 leading-relaxed text-sm">
+                  Rigorous assessment of likely significant effects on ecological receptors, supporting Environmental Impact Assessment and planning consent.
+                </p>
+              </div>
+
+              {/* Invasive Species */}
+              <div className="md:col-span-4 bg-surface-container-lowest p-10 rounded-xl editorial-shadow group hover:bg-primary transition-colors duration-500">
+                <div className="mb-8 text-secondary group-hover:text-primary-fixed">
+                  <span className="material-symbols-outlined text-5xl">
+                    grass
+                  </span>
+                </div>
+                <h3 className="text-xl font-headline font-bold text-primary mb-4 group-hover:text-white">
+                  Invasive Species Surveys
+                </h3>
+                <p className="text-on-surface-variant group-hover:text-white/75 leading-relaxed text-sm">
+                  Identification, mapping, and management planning for invasive non-native species including Japanese Knotweed, Himalayan Balsam, and Giant Hogweed.
+                </p>
+              </div>
+
             </div>
           </div>
         </section>
 
-        {/* About Us: Asymmetric Layout */}
-        <section className="py-32 bg-surface">
+        {/* About Section */}
+        <section className="py-32 bg-surface" id="about">
           <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="relative">
               <div className="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
@@ -240,38 +234,35 @@ export default function Home() {
                 <img
                   alt="Professional ecologist conducting a field survey in UK countryside"
                   className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4XYd61tzFAEqhbZ3YS5Da4GNY-u2Ti5LlejDJmvJXysX2gsUw9KJbRG-qfujGaOe3H6N_PuFv5fmBm6a5I0aMnw7pTteF65bXeswYNhuCqUZycZm2h37Owf0ItfkbBoebL2x5cRj3fMtxxtVBLOxXl_djX2j2BtAD8_k0jlbffA_YL1IHZ3IfOA0DlrMGBHF6jsOSGPdj5NX421lpg1Pfn8ib-bObgcPSa8xvS-9DxG-G1Pd6DyLROq-11HcqztU_zDGZcUUYE38A"
+                  src="/about-image.jpg"
                 />
               </div>
-              <div className="absolute -bottom-12 -right-12 bg-primary-container p-12 rounded-xl hidden md:block max-w-xs editorial-shadow">
+              <div className="absolute -bottom-12 -right-12 bg-primary p-12 rounded-xl hidden md:block max-w-xs editorial-shadow">
                 <p className="text-primary-fixed text-4xl font-headline font-extrabold mb-2">
-                  15+
+                  25+
                 </p>
-                <p className="text-white font-label tracking-wider text-xs uppercase">
-                  Years of Field Expertise in the UK
+                <p className="text-white/80 font-label tracking-wider text-xs uppercase">
+                  Years of Combined Field Expertise
                 </p>
               </div>
             </div>
             <div>
-              <span className="text-primary font-label tracking-[0.2em] uppercase text-xs mb-6 block">
-                Our Commitment
+              <span className="text-secondary font-label tracking-[0.2em] uppercase text-xs mb-6 block font-semibold">
+                About NatureLogic
               </span>
               <h2 className="text-primary font-headline text-4xl md:text-5xl font-extrabold tracking-tight mb-8 leading-tight">
-                Expert knowledge, rooted in the{" "}
-                <span className="italic font-normal">natural</span> environment.
+                Deep ecological expertise,{" "}
+                <span className="italic font-light">delivered differently.</span>
               </h2>
               <div className="space-y-6 text-on-surface-variant text-lg leading-relaxed">
                 <p>
-                  At The Ecological Observer, we believe that development and
-                  conservation are not mutually exclusive. Our mission is to
-                  provide the high-fidelity data and strategic insight necessary
-                  to bridge that gap.
+                  NatureLogic is an ecology consultancy founded by experienced ecologists to help developers and infrastructure companies understand and navigate complex ecological requirements within the UK planning system.
                 </p>
                 <p>
-                  Our team of CIEEM-registered ecologists specializes in
-                  navigating the UK&apos;s intricate legislative landscape,
-                  ensuring that your projects meet the highest standards of
-                  environmental stewardship.
+                  We bring together two things that the ecology sector has historically kept apart: deep ecological expertise and modern, technology-enabled delivery. Where most ecology consultancies still operate on manual processes — paper-based field data, slow report turnaround, spreadsheet-driven BNG calculations — NatureLogic is built from the ground up to work differently.
+                </p>
+                <p>
+                  Technology is not an add-on; it is part of how we operate, how we deliver, and how we compete. Our particular strength is high-level ecological strategy — helping clients understand ecological risk and options early in the planning process.
                 </p>
               </div>
               <div className="mt-12 pt-12 border-t border-outline-variant/30 grid grid-cols-2 gap-8">
@@ -296,168 +287,57 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Latest Research: Editorial Cards */}
-        <section className="py-32 bg-surface-container">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="mb-20 text-center max-w-2xl mx-auto">
-              <h2 className="text-primary font-headline text-4xl font-extrabold tracking-tight mb-4">
-                Latest Insights
-              </h2>
-              <p className="text-on-surface-variant">
-                Peer-reviewed research and practical application from the front
-                lines of UK ecology.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <article className="group">
-                <div className="aspect-video rounded-lg overflow-hidden mb-6">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    alt="Night-time bat surveying equipment in a forest setting"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq__VM_DAtTjo_NXohSdzbzG8gTmnlkpdur2DSl692OSKDfQ4Walpppug6Mlvlv0BjNlCKUoP43SpUTwco0w2efiab8rr4JHAkBCPBX6_RZKeYUHx21oGIUhHdFbHUDeYYHe7FB-TKXtFvyA3PEjuHf4Lstqf_qKQO2KiiMxQV-V-Whqn_Au89EZA-v2JtxpT2HeYoG0m5Rw9SHcDfu1bFh9KBQcHCbX2ryZEv0R8RaVengYjn8gPXOsdfXyKU-gJIDJzuMz6Uupc5"
-                  />
-                </div>
-                <span className="text-[0.65rem] font-bold text-primary/60 tracking-widest uppercase mb-3 block">
-                  WHITE PAPER — 2024
-                </span>
-                <h3 className="text-xl font-headline font-bold text-primary mb-4 group-hover:text-secondary transition-colors leading-tight">
-                  The Impact of Light Pollution on Bat Foraging Corridors in
-                  Rural Kent
-                </h3>
-                <p className="text-on-surface-variant text-sm mb-6 line-clamp-2">
-                  Exploring how developmental lighting affects the connectivity
-                  of ancient woodland habitats for local bat populations.
-                </p>
-                <a
-                  className="inline-flex items-center gap-2 font-bold text-sm text-primary group-hover:gap-4 transition-all"
-                  href="#"
-                >
-                  Read Full Study{" "}
-                  <span className="material-symbols-outlined text-sm">
-                    trending_flat
-                  </span>
-                </a>
-              </article>
-
-              <article className="group">
-                <div className="aspect-video rounded-lg overflow-hidden mb-6">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    alt="Digital tablet showing ecological mapping data in the field"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFRi2VfXihAsTMmCJb4x9twediCXs3kyqpQbzC63WB_55nXlK0Pz1vlrudDyXIKJkSbv20fvvyFkuxTyRHbOqS1FiHoqUPz9f-MeKsDKLZwRZUoLarlaKzsgYE9CzLyDv1YuRO9-XX5YlpD-44b1-B4yi9GqsHafJ6V1WN4zZPqUYP6dK2Cr89jCRxvofGa_iCxflLvx3iIXGgWe7elhBcSLxSUrwHE0vJXdjEijzYj_ppfqkEmix_ejSGdB5nCP8RDSJRj0fcWVh7"
-                  />
-                </div>
-                <span className="text-[0.65rem] font-bold text-primary/60 tracking-widest uppercase mb-3 block">
-                  CASE STUDY — OXFORDSHIRE
-                </span>
-                <h3 className="text-xl font-headline font-bold text-primary mb-4 group-hover:text-secondary transition-colors leading-tight">
-                  Implementing 15% Biodiversity Net Gain on a 500-Unit
-                  Residential Scheme
-                </h3>
-                <p className="text-on-surface-variant text-sm mb-6 line-clamp-2">
-                  A technical breakdown of how we utilized on-site mitigation
-                  and local credits to exceed statutory requirements.
-                </p>
-                <a
-                  className="inline-flex items-center gap-2 font-bold text-sm text-primary group-hover:gap-4 transition-all"
-                  href="#"
-                >
-                  View Methodology{" "}
-                  <span className="material-symbols-outlined text-sm">
-                    trending_flat
-                  </span>
-                </a>
-              </article>
-
-              <article className="group">
-                <div className="aspect-video rounded-lg overflow-hidden mb-6">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    alt="Close-up of a Great Crested Newt in a glass container for study"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAW7eoHO63nO-NwX9aYGtQSTGWnbUB_unvQqKuz3gKnKLGcevvCdYahjZUfCedXSIHOoyWu2I6c_JZ0rq44JVREmRzlVpHg7KIRj8HHnf5B6kaHDFm5LIr_P7UXiQhjijvxFjnGRMlejQZjvm8zQmAPTRh7bV9rKA24SbPoGxB0-5wAZsJAgF1ZRFhlvnUzkOSWFgk6McwLhaOSwjKdp1BQMSaTUnEbX1IA8mpYT14-dBNHK-gFr2L8ZQkMc1xXjukcJu94LAGTdRA"
-                  />
-                </div>
-                <span className="text-[0.65rem] font-bold text-primary/60 tracking-widest uppercase mb-3 block">
-                  POLICY REVIEW — 2023
-                </span>
-                <h3 className="text-xl font-headline font-bold text-primary mb-4 group-hover:text-secondary transition-colors leading-tight">
-                  Protected Species Licensing: Navigating the 2024 Regulatory
-                  Shift
-                </h3>
-                <p className="text-on-surface-variant text-sm mb-6 line-clamp-2">
-                  How upcoming legislative changes will affect project timelines
-                  and licensing requirements for protected species.
-                </p>
-                <a
-                  className="inline-flex items-center gap-2 font-bold text-sm text-primary group-hover:gap-4 transition-all"
-                  href="#"
-                >
-                  Get the Guide{" "}
-                  <span className="material-symbols-outlined text-sm">
-                    trending_flat
-                  </span>
-                </a>
-              </article>
-            </div>
-          </div>
-        </section>
-
         {/* Contact Section */}
-        <section className="py-32 bg-primary">
+        <section className="py-32 bg-primary" id="contact">
           <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
               <h2 className="text-white font-headline text-4xl font-extrabold tracking-tight mb-6">
                 Ready to discuss your project?
               </h2>
-              <p className="text-emerald-100/70 text-lg mb-12">
-                Speak with a lead ecologist today about your site&apos;s
-                requirements. We offer free initial consultations for all new
-                development inquiries.
+              <p className="text-white/70 text-lg font-light mb-12">
+                Speak with a lead ecologist today about your site&apos;s requirements. We offer free initial consultations for all new development enquiries.
               </p>
               <div className="space-y-8">
                 <div className="flex items-start gap-6">
-                  <div className="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center text-primary-fixed">
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-primary-fixed border border-white/20">
+                    <span className="material-symbols-outlined">person</span>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold mb-1">Aaron Grainger</h4>
+                    <p className="text-white/60">Founder &amp; Director</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-6">
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-primary-fixed border border-white/20">
                     <span className="material-symbols-outlined">mail</span>
                   </div>
                   <div>
-                    <h4 className="text-white font-bold mb-1">
-                      Email Our Office
-                    </h4>
-                    <p className="text-emerald-100/60">
-                      enquiries@ecologicalobserver.co.uk
-                    </p>
+                    <h4 className="text-white font-bold mb-1">Email</h4>
+                    <a href="mailto:aarongrainger@naturelogic.co.uk" className="text-white/60 hover:text-white transition-colors">
+                      aarongrainger@naturelogic.co.uk
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-6">
-                  <div className="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center text-primary-fixed">
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-primary-fixed border border-white/20">
                     <span className="material-symbols-outlined">call</span>
                   </div>
                   <div>
-                    <h4 className="text-white font-bold mb-1">
-                      Direct Technical Line
-                    </h4>
-                    <p className="text-emerald-100/60">+44 (0) 20 8123 4567</p>
+                    <h4 className="text-white font-bold mb-1">Phone</h4>
+                    <a href="tel:07809383255" className="text-white/60 hover:text-white transition-colors">
+                      07809 383255
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-6">
-                  <div className="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center text-primary-fixed">
-                    <span
-                      className="material-symbols-outlined"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
-                    >
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-primary-fixed border border-white/20">
+                    <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
                       location_on
                     </span>
                   </div>
                   <div>
-                    <h4 className="text-white font-bold mb-1">Headquarters</h4>
-                    <p className="text-emerald-100/60">
-                      Bristol &amp; South West Regional Office
-                      <br />
-                      Temple Meads, Bristol, BS1 6QF
-                    </p>
+                    <h4 className="text-white font-bold mb-1">Location</h4>
+                    <p className="text-white/60">Based in London, operating nationwide</p>
                   </div>
                 </div>
               </div>
@@ -470,7 +350,7 @@ export default function Home() {
                       Full Name
                     </label>
                     <input
-                      className="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none"
+                      className="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none font-body"
                       placeholder="Jane Smith"
                       type="text"
                     />
@@ -480,7 +360,7 @@ export default function Home() {
                       Email Address
                     </label>
                     <input
-                      className="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none"
+                      className="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none font-body"
                       placeholder="jane@company.com"
                       type="email"
                     />
@@ -490,12 +370,15 @@ export default function Home() {
                   <label className="text-[0.65rem] font-bold text-primary/60 tracking-widest uppercase">
                     Project Type
                   </label>
-                  <select className="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none appearance-none">
+                  <select className="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none appearance-none font-body">
                     <option>Residential Development</option>
                     <option>Infrastructure Project</option>
                     <option>Renewable Energy</option>
                     <option>Biodiversity Net Gain Strategy</option>
                     <option>Protected Species Survey</option>
+                    <option>Ecological Due Diligence</option>
+                    <option>Invasive Species</option>
+                    <option>Other</option>
                   </select>
                 </div>
                 <div className="space-y-2">
@@ -503,16 +386,16 @@ export default function Home() {
                     Message / Site Details
                   </label>
                   <textarea
-                    className="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none"
-                    placeholder="How can our experts assist you?"
+                    className="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none font-body"
+                    placeholder="How can we help you?"
                     rows={4}
                   ></textarea>
                 </div>
                 <button
-                  className="w-full silk-gradient text-white py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-all"
+                  className="w-full silk-gradient text-white py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-all font-headline"
                   type="submit"
                 >
-                  Submit Inquiry
+                  Send Enquiry
                 </button>
               </form>
             </div>
@@ -521,62 +404,40 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-emerald-900 dark:bg-emerald-950 w-full pt-16 pb-8">
+      <footer className="w-full pt-16 pb-8" style={{ background: '#0f3522' }}>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
           <div className="md:col-span-1">
-            <div className="text-lg font-bold text-white font-headline mb-6">
-              The Ecological Observer
-            </div>
-            <p className="text-emerald-200/60 text-sm leading-relaxed mb-8">
-              Professional ecological consultancy providing scientific authority
-              and environmental stewardship across the UK.
+            <Image
+              src="/logo2.png"
+              alt="NatureLogic"
+              width={130}
+              height={44}
+              className="h-9 w-auto mb-6 brightness-0 invert"
+            />
+            <p className="text-white/50 text-sm leading-relaxed mb-8">
+              Expert ecological consultancy and biodiversity net gain advice for developers and infrastructure companies across the UK.
             </p>
-            <div className="flex gap-4">
-              <a className="text-emerald-200/60 hover:text-white" href="#">
-                <span className="material-symbols-outlined">language</span>
-              </a>
-              <a className="text-emerald-200/60 hover:text-white" href="#">
-                <span className="material-symbols-outlined">share</span>
-              </a>
-            </div>
           </div>
           <div className="space-y-4">
             <h5 className="text-white font-bold text-sm uppercase tracking-widest mb-6">
               Services
             </h5>
             <ul className="space-y-3">
-              <li>
-                <a
-                  className="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block"
-                  href="#"
-                >
-                  Habitat Surveys
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block"
-                  href="#"
-                >
-                  Biodiversity Net Gain
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block"
-                  href="#"
-                >
-                  Protected Species
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block"
-                  href="#"
-                >
-                  Mitigation Strategy
-                </a>
-              </li>
+              {[
+                "Early-stage Due Diligence",
+                "Strategic Ecological Advice",
+                "Preliminary Ecological Appraisal",
+                "Ecological Impact Assessment",
+                "Protected Species Surveys",
+                "Invasive Species Surveys",
+                "Habitats Regulations Assessment",
+              ].map((service) => (
+                <li key={service}>
+                  <a className="text-white/50 hover:text-white transition-colors text-sm inline-block" href="#">
+                    {service}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="space-y-4">
@@ -584,38 +445,13 @@ export default function Home() {
               Company
             </h5>
             <ul className="space-y-3">
-              <li>
-                <a
-                  className="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block"
-                  href="#"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block"
-                  href="#"
-                >
-                  Research Portfolio
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block"
-                  href="#"
-                >
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block"
-                  href="#"
-                >
-                  Contact
-                </a>
-              </li>
+              {["About Us", "Contact"].map((item) => (
+                <li key={item}>
+                  <a className="text-white/50 hover:text-white transition-colors text-sm inline-block" href="#">
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="space-y-4">
@@ -623,40 +459,22 @@ export default function Home() {
               Legal
             </h5>
             <ul className="space-y-3">
-              <li>
-                <a
-                  className="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block"
-                  href="#"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block"
-                  href="#"
-                >
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-emerald-200/60 hover:text-white transition-colors hover:translate-x-1 inline-block"
-                  href="#"
-                >
-                  Ethical Conduct
-                </a>
-              </li>
+              {["Privacy Policy", "Terms of Service"].map((item) => (
+                <li key={item}>
+                  <a className="text-white/50 hover:text-white transition-colors text-sm inline-block" href="#">
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-emerald-800/50 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-emerald-200/60 text-xs tracking-wide">
-            © 2024 The Ecological Observer. UK Registered Consultancy.
+        <div className="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-white/40 text-xs tracking-wide">
+            © 2025 NatureLogic Ltd. UK Registered Company.
           </p>
-          <div className="flex gap-8 text-xs text-emerald-200/40">
-            <span>VAT NO: 123 4567 89</span>
-            <span>COMPANY NO: 987654321</span>
+          <div className="text-xs text-white/30">
+            Company No: 16516775
           </div>
         </div>
       </footer>

@@ -1,24 +1,17 @@
 import type { Metadata } from "next";
-import { Manrope, Work_Sans } from "next/font/google";
-import { Agentation } from "agentation";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-manrope",
-});
-
-const workSans = Work_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  variable: "--font-work-sans",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
-  title: "The Ecological Observer | Expert Ecology for Sustainable Development",
+  title: "NatureLogic | Expert Ecological Consultancy",
   description:
-    "UK registered ecological consultancy providing scientific authority and environmental stewardship across the UK.",
+    "NatureLogic is a UK ecology consultancy providing expert ecological consultancy and biodiversity net gain advice for developers and infrastructure companies.",
 };
 
 export default function RootLayout({
@@ -27,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${workSans.variable}`}>
+    <html lang="en" className={montserrat.variable}>
       <head>
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
@@ -37,7 +30,6 @@ export default function RootLayout({
       </head>
       <body className="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
         {children}
-        {process.env.NODE_ENV === "development" && <Agentation />}
       </body>
     </html>
   );
