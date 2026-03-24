@@ -4,15 +4,15 @@ export default function Home() {
   return (
     <>
       {/* Top Navigation Bar */}
-      <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl shadow-sm">
-        <div className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+      <nav className="fixed top-0 w-full z-50 bg-white shadow-sm">
+        <div className="flex justify-between items-center max-w-7xl mx-auto px-8 h-28">
           <div className="flex items-center gap-3">
             <Image
-              src="/logo2.png"
+              src="/logo4.png"
               alt="NatureLogic logo"
               width={140}
               height={48}
-              className="h-20 w-auto"
+              className="h-28 w-auto"
               priority
             />
           </div>
@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="pt-20">
+      <main className="pt-28">
         {/* Hero Section */}
         <section className="relative min-h-[921px] flex items-center overflow-hidden bg-surface">
           <div className="absolute inset-0 z-0">
@@ -408,7 +408,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
           <div className="md:col-span-1">
             <Image
-              src="/logo2.png"
+              src="/logo4.png"
               alt="NatureLogic"
               width={130}
               height={44}
