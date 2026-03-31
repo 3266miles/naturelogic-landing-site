@@ -8,7 +8,7 @@ export default function Home() {
         <div className="flex justify-between items-center max-w-7xl mx-auto px-8 h-28">
           <div className="flex items-center gap-3">
             <Image
-              src="/logo4.png"
+              src="/logo6.png"
               alt="NatureLogic logo"
               width={140}
               height={48}
@@ -59,9 +59,6 @@ export default function Home() {
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
             <div className="max-w-2xl">
-              <span className="inline-block bg-white/15 text-white px-4 py-1 rounded-full text-[0.75rem] font-label tracking-[0.08em] uppercase mb-6 backdrop-blur-sm border border-white/20">
-                UK Registered Consultancy
-              </span>
               <h1 className="text-white font-headline text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] mb-8">
                 Providing Market-leading{" "}
                 <span className="text-primary-fixed">Ecological Consultancy</span>{" "}
@@ -408,11 +405,11 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
           <div className="md:col-span-1">
             <Image
-              src="/logo4.png"
+              src="/logo6.png"
               alt="NatureLogic"
               width={130}
               height={44}
-              className="h-9 w-auto mb-6 brightness-0 invert"
+              className="h-9 w-auto mb-6"
             />
             <p className="text-white/50 text-sm leading-relaxed mb-8">
               Expert ecological consultancy and biodiversity net gain advice for developers and infrastructure companies across the UK.
@@ -459,14 +456,9 @@ export default function Home() {
               Legal
             </h5>
             <ul className="space-y-3">
-              {["Privacy Policy", "Terms of Service"].map((item) => (
-                <li key={item}>
-                  <a className="text-white/50 hover:text-white transition-colors text-sm inline-block" href="#">
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
+              <li><a className="text-white/50 hover:text-white transition-colors text-sm inline-block" href="/privacy">Privacy Policy</a></li>
+              <li><a className="text-white/50 hover:text-white transition-colors text-sm inline-block" href="/terms">Terms of Service</a></li>
+              </ul>
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
