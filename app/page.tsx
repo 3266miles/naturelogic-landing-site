@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 export default function Home() {
@@ -45,6 +46,10 @@ export default function Home() {
         </div>
       </nav>
 
+      <div id="cookie-banner" className="fixed bottom-0 w-full z-50 bg-primary px-8 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p className="text-white/80 text-sm">We use cookies to improve your browsing experience and collect anonymised analytics data. By continuing to use this site you agree to our <a href="/privacy" className="text-primary-fixed hover:underline">Privacy Policy</a>.</p>
+        <button onClick={() => { document.getElementById("cookie-banner")!.style.display="none"; localStorage.setItem("cookies-accepted","true"); }} className="bg-white text-primary px-6 py-2 rounded-xl font-headline font-semibold text-sm whitespace-nowrap hover:opacity-80 transition-opacity">Accept</button>
+      </div>
       <main className="pt-28">
         {/* Hero Section */}
         <section className="relative min-h-[921px] flex items-center overflow-hidden bg-surface">
@@ -468,6 +473,7 @@ export default function Home() {
           <div className="text-xs text-white/30">
             Company No: 16516775
           </div>
+          <div className="text-xs text-white/30">Registered Office: 7 (Flat 1) Cornwall Road, London, N4 4PH</div>
         </div>
       </footer>
     </>
