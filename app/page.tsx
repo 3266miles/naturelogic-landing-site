@@ -9,10 +9,10 @@ export default function Home() {
         <div className="flex justify-between items-center max-w-7xl mx-auto px-8 h-28">
           <div className="flex items-center gap-3">
             <Image
-              src="/logo6.png"
+              src="/logo7.png"
               alt="NatureLogic logo"
-              width={140}
-              height={48}
+              width={560}
+              height={192}
               className="h-28 w-auto"
               priority
             />
@@ -410,7 +410,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
           <div className="md:col-span-1">
             <Image
-              src="/logo6.png"
+              src="/logo7.png"
               alt="NatureLogic"
               width={130}
               height={44}
